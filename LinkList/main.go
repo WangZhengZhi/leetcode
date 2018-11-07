@@ -66,7 +66,7 @@ func (head *LinkList) Insert(index int, data Element) {
 func (head *LinkList) Search(data Element) {
 	point := head
 	index := 0
-	for point.Nest != nil {
+	for point!= nil {
 		if point.Data == data {
 			fmt.Println(data, "show in at index: ", index)
 			break
@@ -116,10 +116,10 @@ func main() {
 
 	}
 	head.Traverse() //遍历linklist
-	head.Search(8)  //查询数据
+	head.Search(9)  //查询数据
 	fmt.Println("length:", head.GetLength())
 	fmt.Println("data:", head.GetData(9))
-	head.Delete(2) //删除索引为2 的数据
-	head.Traverse()//遍历数据
+	/*head.Delete(2) //删除索引为2 的数据
+	head.Traverse()//遍历数据*/
 
 }
