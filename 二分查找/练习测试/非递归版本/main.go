@@ -7,8 +7,9 @@ import (
 /*非递归版本的二分查找*/
 
 func BinarySearch(arr []int, low, high, target int) int {
-	mid := low + (high-low)/2
+
 	for low <= high {
+		mid := low + (high-low)/2
 		if arr[mid] == target {
 			return mid
 
@@ -25,5 +26,5 @@ func BinarySearch(arr []int, low, high, target int) int {
 }
 func main() {
 	arr := []int{1, 2, 3, 4, 5, 6, 7, 8}
-	fmt.Println(BinarySearch(arr,0,7,4))
+	fmt.Println(BinarySearch(arr, 0, 7, 4))
 }
