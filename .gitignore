@@ -2,3 +2,6 @@
 *.xml
 *.iml
 hello/hello.exe
+*.sqlite
+*.json
+*.test
