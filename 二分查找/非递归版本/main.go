@@ -1,20 +1,30 @@
 package main
 
-/*非递归版本*/
-func main() {
+import (
+	"fmt"
+)
 
-}
-func Binarysearch(arr []int, high, low, target int) int {
-	mid := low + (high-low)/2
-	if arr[mid] == target {
-		return mid
+/*非递归版本的二分查找*/
 
-	} else if arr[mid] > target {
-		high = mid
-	} else if arr[mid] < target {
-		low = mid
+func BinarySearch(arr []int, low, high, target int) int {
 
+	for low <= high {
+		mid := low + (high-low)/2
+		if arr[mid] == target {
+			return mid
+
+		} else if arr[mid] > target {
+			high = mid
+
+		} else if arr[mid] < target {
+			low = mid
+
+		}
 	}
-	return 0
 
+	return -1
+}
+func main() {
+	arr := []int{1, 2, 3, 4, 5, 6, 7, 8}
+	fmt.Println(BinarySearch(arr, 0, 7, 4))
 }
